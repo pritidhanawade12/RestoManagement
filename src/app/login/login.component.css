@@ -1,0 +1,17 @@
+
+.login
+{
+    position: relative;
+    top:120px;
+    height:400%;
+    width:60%;
+    left:40%;
+    /* background-image: url('src\assets\nature.jpg'); */
+}
+.inputBox
+{
+    height:80%;
+    width:40%;
+    right:40%;
+
+}

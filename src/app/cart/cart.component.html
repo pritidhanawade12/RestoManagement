@@ -1,0 +1,40 @@
+<!-- <p>
+  employee-list works!
+</p> -->
+
+<!-- <button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button> -->
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+               <th>Menu Name</th><th>Price</th>  <th>Quantity</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cart of data1;index as j">
+              
+        
+                <td>{{cart.Menu}}</td>
+                <td>{{price[j]}}</td>
+                <td>
+                    <button type="button" (click)="minus(j)" ><i class="glyphicon glyphicon-minus">  </i>  </button>
+                    <button type="button" routerLinkActive="router-link-active"  class="btn btn-success">{{count[j]}}</button>
+                    <button type="button" (click)="plus(j)"><i class="glyphicon glyphicon-plus">  </i>  </button>
+ 
+                </td>
+
+            </tr>
+            <tr>
+                <th>Total Price</th>
+                <th>{{Total_Price}}</th>
+                <td>
+                        <button type="button" [routerLink]="['/order']" routerLinkActive="router-link-active" (click)="PlaceOrder()" class="btn btn-success">Place Order</button>
+                </td>
+              
+            </tr>
+    
+        </tbody>
+    </table>
+</div>
+

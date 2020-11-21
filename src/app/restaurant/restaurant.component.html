@@ -1,0 +1,29 @@
+<!-- <p>
+  employee-list works!
+</p> -->
+
+<!-- <button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button> -->
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Profile</th><th>Name</th><th>Type</th>  <th>Address</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Restaurants of data1">
+              
+                <td><img src="http://localhost:51492/Photos/{{Restaurants.RestaurantName}}.jpg" alt="" style="position: relative;
+                    left: 15%; height: 70px; width: 70px;"></td>
+                <td>{{Restaurants.RestaurantName}}</td>
+                <td>{{Restaurants.Type}}</td>
+                <td>{{Restaurants.Address}}</td>
+                <td>
+                    <button type="button" [routerLink]="['/menu']" routerLinkActive="router-link-active" (click)="Menu(Restaurants.RestaurantId)" class="btn btn-success">View Menu</button>
+                </td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
+
